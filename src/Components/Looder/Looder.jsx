@@ -9,7 +9,7 @@ const LoadingScreen = ({ onLoaded }) => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
       onLoaded(); // يخبر التطبيق الرئيسي بأن التحميل انتهى
-    }, 18000); // المدة الزمنية قبل التحميل (يمكنك تعديلها حسب الحاجة)
+    }, 17800); // المدة الزمنية قبل التحميل (يمكنك تعديلها حسب الحاجة)
 
     return () => clearTimeout(timer);
   }, [onLoaded]);
