@@ -12,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
+  text-align: center;
 }
 .Img-area
 {
@@ -40,4 +41,44 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* لضمان ملائمة الصورة بالكامل داخل الـ div */
+}
+
+@media (max-width:880px)
+{
+  .Hero .Hero-Div
+  {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width:880px)
+{
+  .Hero .Hero-Div
+  {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+
+  }
+}
+
+@media (max-width:880px)
+{
+  .Hero .Hero-Div .Content h2
+  { 
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .Hero .Hero-Div .Content h3
+  { 
+    font-size: 16px;
+    font-weight: 400;
+  }
 }

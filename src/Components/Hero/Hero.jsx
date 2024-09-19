@@ -14,8 +14,8 @@ export default function Hero() {
 
   // دالة لتغيير حركة وحجم الـ blob
   const randomMovement = () => {
-    const randomX = Math.random() * 0 - 20;
-    const randomY = Math.random() * 0 - 20;
+    const randomX = Math.random() * 0 ;
+    const randomY = Math.random() * 0 ;
     const randomScale = Math.random() * 0 + 1.5;
 
     setBorderRadius(randomBorderRadius());
@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="blob" style={{ borderRadius, transform }}>
           <img src={MyPhoto} alt="Profile" />
         </div>
-        <div>
+        <div className='Content'>
           <h2>My Name Is Faisal Qashmr</h2>
           <h3>just scrolling To Discover Me</h3>
         </div>
