@@ -18,7 +18,7 @@ const LoadingScreen = ({ onLoaded }) => {
     <div className={`loading-screen ${isLoaded ? 'fade-out' : ''}`}>
       <div className="typewriter-container">
       <Typewriter
-        words={['HI', 'Welcome to my Portfolio', 'If you are looking for a React developer ..?' , 'Then you are in the right place' , 'Enjoy your stay !']}
+        words={['HI', 'Welcome to my Portfolio', 'If you are looking for a React developer !!' , 'Then you are in the right place' , 'Enjoy your stay !']}
         loop={0}
         cursor
         cursorStyle='|'

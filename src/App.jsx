@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css'
 import PortfolioContent from './Components/PortfolioContent/PortfolioContent';
 import LoadingScreen from './Components/Looder/Looder';
+import StarryBackground from './Animation/Start/start';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <main>
+      <StarryBackground/>
       {loading ? (
         <LoadingScreen onLoaded={handleLoaded} />
       ) : (
