@@ -14,9 +14,9 @@ export default function Hero() {
 
   // دالة لتغيير حركة وحجم الـ blob
   const randomMovement = () => {
-    const randomX = Math.random() * 50 - 20;
-    const randomY = Math.random() * 50 - 20;
-    const randomScale = Math.random() * 0.5 + 1;
+    const randomX = Math.random() * 0 - 20;
+    const randomY = Math.random() * 0 - 20;
+    const randomScale = Math.random() * 0 + 1.5;
 
     setBorderRadius(randomBorderRadius());
     setTransform(`translate(${randomX}px, ${randomY}px) scale(${randomScale})`);
@@ -24,7 +24,7 @@ export default function Hero() {
 
   // استخدام useEffect لتطبيق الحركة العشوائية بشكل مستمر
   useEffect(() => {
-    const interval = setInterval(randomMovement, 400); // تغيير كل 1.5 ثانية
+    const interval = setInterval(randomMovement, 800); // تغيير كل 1.5 ثانية
     return () => clearInterval(interval); // تنظيف التايمر عند تفكيك المكون
   }, []);
 
@@ -36,7 +36,8 @@ export default function Hero() {
           <img src={MyPhoto} alt="Profile" />
         </div>
         <div>
-          x
+          <h2>My Name Is Faisal Qashmr</h2>
+          <h3>just scrolling To Discover Me</h3>
         </div>
       </div>
     </section>
