@@ -1,6 +1,7 @@
 body
 {
   background-color: var(--general-color);
+  user-select: none;
 }
 main
 {

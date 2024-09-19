@@ -8,48 +8,65 @@ const StarryBackground = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    const width = window.innerWidth;
-    const height = window.innerHeight;
 
-    canvas.width = width;
-    canvas.height = height;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-    const numStars = 80;  // تقليل عدد النجوم
+    resizeCanvas();
+
+    const numStars = 80;
     const stars = [];
 
     // إنشاء النجوم
     for (let i = 0; i < numStars; i++) {
       stars.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
         radius: Math.random() * 1.5,
         vx: Math.random() * 0.5 - 0.25,
         vy: Math.random() * 0.5 - 0.25,
+        opacity: Math.random(), // إضافة شفافية عشوائية للوميض
+        twinkleSpeed: Math.random() * 0.05 + 0.02, // سرعة وميض مختلفة لكل نجم
       });
     }
 
-    // رسم النجوم
     const drawStars = () => {
-      ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = '#ffffff';
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
       stars.forEach((star) => {
         ctx.beginPath();
+
+        // إضافة التوهج
+        ctx.shadowBlur = 45;  // التوهج
+        ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';  // لون التوهج
+
+        // تطبيق الشفافية على النجوم لتطبيق تأثير الوميض
+        ctx.globalAlpha = Math.abs(Math.sin(star.opacity)); // يجعل الوميض متذبذبًا
+
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'white';
         ctx.fill();
       });
+
+      // إعادة الشفافية الافتراضية بعد رسم النجوم
+      ctx.globalAlpha = 1;
     };
 
-    // تحديث النجوم
     const updateStars = () => {
       stars.forEach((star) => {
         star.x += star.vx;
         star.y += star.vy;
-        if (star.x < 0 || star.x > width) star.vx *= -1;
-        if (star.y < 0 || star.y > height) star.vy *= -1;
+        if (star.x < 0 || star.x > canvas.width) star.vx *= -1;
+        if (star.y < 0 || star.y > canvas.height) star.vy *= -1;
+
+        // تحديث الشفافية للوميض
+        star.opacity += star.twinkleSpeed;
+        if (star.opacity > Math.PI * 2) star.opacity = 0; // إعادة تعيين الدورة
       });
     };
 
-    // رسم الخطوط بين النجوم والمؤشر
     const drawLines = () => {
       ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
       stars.forEach((star) => {
@@ -57,7 +74,7 @@ const StarryBackground = () => {
         const dy = star.y - mouseY;
         const distanceSquared = dx * dx + dy * dy;
 
-        if (distanceSquared < 150 * 150) {  // تقليل المسافة للحفاظ على الأداء
+        if (distanceSquared < 150 * 150) {
           ctx.beginPath();
           ctx.moveTo(star.x, star.y);
           ctx.lineTo(mouseX, mouseY);
@@ -78,15 +95,18 @@ const StarryBackground = () => {
       mouseY = e.clientY;
     };
 
+    window.addEventListener('resize', resizeCanvas);
     window.addEventListener('mousemove', handleMouseMove);
+
     animate();
 
     return () => {
+      window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ display: 'block' }} />;
+  return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }} />;
 };
 
 export default StarryBackground;
