@@ -15,3 +15,27 @@
   color: var(--Text-color);
   font-family: var(--general-Font);
 }
+
+/* تخصيص شريط التمرير الكامل */
+::-webkit-scrollbar {
+  display: none;
+  width: 12px; /* عرض شريط التمرير */
+  height: 12px; /* ارتفاع شريط التمرير عند التمرير الأفقي */
+}
+
+/* تخصيص الخلفية لشريط التمرير */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* لون الخلفية لشريط التمرير */
+}
+
+/* تخصيص المقبض داخل شريط التمرير */
+::-webkit-scrollbar-thumb {
+  background-color: var(--general-color); /* لون المقبض */
+  border-radius: 6px; /* زوايا دائرية للمقبض */
+  border: 3px solid #f1f1f1; /* إضافة حواف حول المقبض */
+}
+
+/* تغيير لون المقبض عند التمرير */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--general-color); /* لون المقبض عند التمرير */
+}
