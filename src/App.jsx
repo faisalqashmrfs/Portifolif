@@ -14,7 +14,7 @@ function App() {
   return (
     <main>
       <StarryBackground/>
-      {loading ? (
+      {!loading ? (
         <LoadingScreen onLoaded={handleLoaded} />
       ) : (
         <PortfolioContent /> // هذا هو المحتوى الأساسي للبورتفوليو

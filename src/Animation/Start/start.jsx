@@ -16,8 +16,10 @@ const StarryBackground = () => {
 
     resizeCanvas();
 
-    const numStars = 80;
+    const numStars = 150;
     const stars = [];
+    const maxMeteors = 4; // عدد الشهب الأقصى
+    const meteors = [];
 
     // إنشاء النجوم
     for (let i = 0; i < numStars; i++) {
@@ -25,10 +27,23 @@ const StarryBackground = () => {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         radius: Math.random() * 1.5,
-        vx: Math.random() * 0.5 - 0.25,
-        vy: Math.random() * 0.5 - 0.25,
+        vx: Math.random() * .5 - 0.15,
+        vy: Math.random() * .5 - 0.15,
         opacity: Math.random(), // إضافة شفافية عشوائية للوميض
         twinkleSpeed: Math.random() * 0.05 + 0.02, // سرعة وميض مختلفة لكل نجم
+      });
+    }
+
+    // إنشاء الشهب
+    for (let i = 0; i < maxMeteors; i++) {
+      meteors.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 10 + 10, // حجم الشهب أكبر من النجوم
+        vx: Math.random() * 10.5 - 0.75, // حركة أفقية عشوائية
+        vy: Math.random() * 10.5 - 0.75, // حركة رأسية عشوائية
+        opacity: Math.random(), // وميض
+        twinkleSpeed: Math.random() * 0.5 + 0.01, // سرعة وميض
       });
     }
 
@@ -39,8 +54,8 @@ const StarryBackground = () => {
         ctx.beginPath();
 
         // إضافة التوهج
-        ctx.shadowBlur = 45;  // التوهج
-        ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';  // لون التوهج
+        ctx.shadowBlur = 45; // التوهج
+        ctx.shadowColor = 'rgba(255, 255, 255, 0.8)'; // لون التوهج
 
         // تطبيق الشفافية على النجوم لتطبيق تأثير الوميض
         ctx.globalAlpha = Math.abs(Math.sin(star.opacity)); // يجعل الوميض متذبذبًا
@@ -54,6 +69,25 @@ const StarryBackground = () => {
       ctx.globalAlpha = 1;
     };
 
+    const drawMeteors = () => {
+      meteors.forEach((meteor) => {
+        ctx.beginPath();
+
+        // توهج الشهب باللون الأزرق
+        ctx.shadowBlur = 45;
+        ctx.shadowColor = '#f0f'; // توهج أزرق
+
+        // وميض الشهب
+        ctx.globalAlpha = Math.abs(Math.sin(meteor.opacity));
+
+        ctx.arc(meteor.x, meteor.y, meteor.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#f0f'; // لون الشهاب الأزرق
+        ctx.fill();
+      });
+
+      ctx.globalAlpha = 1;
+    };
+
     const updateStars = () => {
       stars.forEach((star) => {
         star.x += star.vx;
@@ -64,6 +98,19 @@ const StarryBackground = () => {
         // تحديث الشفافية للوميض
         star.opacity += star.twinkleSpeed;
         if (star.opacity > Math.PI * 2) star.opacity = 0; // إعادة تعيين الدورة
+      });
+    };
+
+    const updateMeteors = () => {
+      meteors.forEach((meteor) => {
+        meteor.x += meteor.vx;
+        meteor.y += meteor.vy;
+        if (meteor.x < 0 || meteor.x > canvas.width) meteor.vx *= -1;
+        if (meteor.y < 0 || meteor.y > canvas.height) meteor.vy *= -1;
+
+        // تحديث الشفافية للوميض
+        meteor.opacity += meteor.twinkleSpeed;
+        if (meteor.opacity > Math.PI * 2) meteor.opacity = 0;
       });
     };
 
@@ -85,7 +132,9 @@ const StarryBackground = () => {
 
     const animate = () => {
       drawStars();
+      drawMeteors(); // إضافة الشهب
       updateStars();
+      updateMeteors(); // تحديث الشهب
       drawLines();
       requestAnimationFrame(animate);
     };

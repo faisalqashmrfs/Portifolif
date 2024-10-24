@@ -2,8 +2,10 @@
 
 :root {
 
-  --general-color: #1b0000;
-  --Text-color: #f0eeee;
+  --general-color: black;
+  --general-color2: blue;
+
+  --Text-color: #8f8f8f;
   --general-Font: "Montserrat", sans-serif;
 }
 

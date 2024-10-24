@@ -2,3 +2,7 @@
 {
   color: var(--Text-color);
 }
+.liner
+{
+  background: linear-gradient(#010101 , rgb(51, 51, 51));
+}

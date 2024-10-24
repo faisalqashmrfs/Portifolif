@@ -26,21 +26,10 @@
   background-size: contain;
 }
 
-.blob {
-  width: 200px;
-  height: 200px;
-  background-color: #ffcc5c;
-  border-radius: 50%;
-  overflow: hidden; /* لإخفاء أي شيء خارج حدود الـ blob */
-  position: relative;
-  transition: all 1s ease; /* لعمل الحركة بشكل سلس */
-}
-
-/* تخصيص الصورة داخل الـ blob */
-.blob img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* لضمان ملائمة الصورة بالكامل داخل الـ div */
+.Hero .Hero-Div img
+{
+  width: 25vw;
+  border-bottom-left-radius: 50%;
 }
 
 @media (max-width:880px)
