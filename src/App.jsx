@@ -13,7 +13,7 @@ function App() {
 
   return (
     <main>
-      <StarryBackground/>
+      {/* <StarryBackground/> */}
       {!loading ? (
         <LoadingScreen onLoaded={handleLoaded} />
       ) : (

@@ -1,0 +1,46 @@
+.footer {  
+    background: linear-gradient(#010101, rgb(51, 51, 51));  
+    color: #c2b4b4;  
+    padding: 20px 0;  
+    text-align: center;  
+    position: relative;  
+    overflow: hidden; /* لمنع العناصر من الخروج من الفوتر */  
+    animation: zoom 2s ease-in-out infinite; /* تطبيق تأثير الزوم */  
+}  
+
+.footer-content {  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 0 20px;  
+}  
+
+.footer-social-icons {  
+    display: flex;  
+    justify-content: center;  
+    margin: 15px 0;  
+    gap: 15px;  
+}  
+
+.footer-social-icon {  
+    color: #c2b4b4;  
+    font-size: 30px;  
+    transition: color 0.3s;  
+}  
+
+.footer-social-icon:hover {  
+    color: #b37700;  
+}  
+
+.footer-text {  
+    margin-top: 10px;  
+}  
+
+/* تأثير الزوم */  
+@keyframes zoom {  
+    0%, 100% {  
+        transform: scale(1,1); /* الحجم الأصلي */  
+    }  
+    50% {  
+        transform: scale(1.2); /* تكبير الحجم قليلاً */  
+    }  
+}

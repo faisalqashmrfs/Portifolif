@@ -6,6 +6,6 @@ body
 main
 {
   /* background: linear-gradient(rgb(94, 99, 145) , black); */
-  background: linear-gradient(#010101 , #010101);
+  /* background: linear-gradient(#010101 , #010101); */
   width: 100%;
 }

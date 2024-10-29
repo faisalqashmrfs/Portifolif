@@ -1,46 +1,109 @@
-.contact-form {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  margin: auto;
+.contact-us-page {  
+  width: 100%;  
+  display: flex;  
+  justify-content: space-evenly;  
+  align-items: flex-start; 
+  padding: 20px;  
+  /* background: linear-gradient(#010101 , rgb(51, 51, 51));   */
+  border-radius: 8px;  
+}  
+
+.form-container, .connect-container {  
+  flex: 1;  
+  max-width: 50%; 
+  margin: 0 10px;  
+}  
+
+h2 {  
+  text-align: center;  
+  color: #c2b4b4;  
+}  
+
+.form-group {  
+  margin-bottom: 15px;  
+}  
+
+label {  
+  display: block;  
+  margin-bottom: 5px;  
+}  
+
+input, textarea {  
+  width: 100%;  
+  padding: 10px;  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
+  background: rgba(51, 51, 51, 0.8); 
+  color: white;  
+}  
+
+textarea {  
+  resize: none;  
+  height: 100px; 
+}  
+
+.submit-button {  
+  width: 100%;  
+  padding: 10px;  
+  background: rgb(117, 107, 107); 
+  color: white; 
+  border: none;  
+  border-radius: 4px;  
+  cursor: pointer;  
+  font-size: 16px; 
+}  
+
+.submit-button:hover {  
+  background-color: #b37700;  
+}  
+
+.connect-container {  
+  margin-top: 8px; 
+}  
+
+.social-icons {  
+  display: flex;  
+  flex-direction: column;   
+  align-items: center;    
+   width: 100%;
+   gap: 10px; 
+ 
+}  
+
+.social-icon {  
+  text-decoration: none;  
+  font-size: 30px;  
+  display: flex;  
+  align-items: center;  
+  justify-content: space-between;  
+  margin: 20px 0;
+}  
+
+.icon-circle {  
+  width: 50px;            
+  height: 50px;           
+  border: 2px solid #ccc;  
+  border-radius: 50%;      
+  display: flex;  
+  align-items: center;     
+  justify-content: center;   
+  background: rgba(51, 51, 51, 0.8); 
+  margin-right: 10px;     
+
+
 }
 
-.form-title {
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.form-button {
-  background: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.form-button:hover {
-  background: #0056b3;
+@keyframes rotate-border {  
+  0% {  
+    border-color: transparent;  
+    transform: rotate(0deg);  
+  }  
+  50% {  
+    border-color: blue;  
+    transform: rotate(180deg);  
+  }  
+  100% {  
+    border-color: transparent;  
+    transform: rotate(360deg);  
+  }  
 }
