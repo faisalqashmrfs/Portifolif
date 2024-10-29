@@ -3,9 +3,36 @@ body
   background-color: var(--general-color);
   user-select: none;
 }
-main
+.main
 {
-  /* background: linear-gradient(rgb(94, 99, 145) , black); */
-  /* background: linear-gradient(#010101 , #010101); */
+  background: linear-gradient(#010101 , #010101);
   width: 100%;
+}
+.desmain
+{
+  background: linear-gradient(transparent , transparent);
+  width: 100%;
+}
+.ModeChanger
+{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: 10s ease-out;
+  border: none;
+  border-top: 1px solid gray;
+}
+.ModeChanger:hover
+{
+  rotate: 36000deg;
+  transition: 10s ease-out;
 }

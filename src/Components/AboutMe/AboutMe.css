@@ -18,13 +18,20 @@
   text-align: center;
 }
 .blob {
-  width: 200px;
-  height: 200px;
-  background-color: #ffcc5c;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
-  overflow: hidden; /* لإخفاء أي شيء خارج حدود الـ blob */
-  position: relative;
-  transition: all 1s ease; /* لعمل الحركة بشكل سلس */
+  overflow: hidden;
+  animation: identifier 5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes identifier {
+  0%{
+    box-shadow: 0px 0px 1px 1px gray;
+  }
+  100%{
+    box-shadow: 0px 0px 100px 5px gray;
+  }
 }
 
 /* تخصيص الصورة داخل الـ blob */

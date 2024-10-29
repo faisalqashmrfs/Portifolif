@@ -16,7 +16,7 @@ const StarryBackground = () => {
 
     resizeCanvas();
 
-    const numStars = 150;
+    const numStars = 100;
     const stars = [];
     const maxMeteors = 4; // عدد الشهب الأقصى
     const meteors = [];
