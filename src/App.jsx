@@ -16,6 +16,7 @@ function App() {
   return (
     <main className={Mode? 'desmain' : 'main'}>
       <StarryBackground/>
+
       {!loading ? (
         <LoadingScreen onLoaded={handleLoaded} />
       ) : (

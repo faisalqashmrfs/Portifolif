@@ -1,65 +1,64 @@
-import React, { useState } from 'react'
-import './Contact.css'
+import React from 'react';  
+import './Contact.css';  
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';  
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';  
 
-export default function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-});
+const ContactUs = () => {  
+    return (  
+        <div className="contact-us-page">  
+            <div className="form-container">  
+                <h2>Send Me a Message</h2>  
+                <form>  
+                    <div className="form-group">  
+                        <label>Name:</label>  
+                        <input type="text" required />  
+                    </div>  
+                    <div className="form-group">  
+                        <label>Email:</label>  
+                        <input type="email" required />  
+                    </div>  
+                    <div className="form-group">  
+                        <label>Subject:</label>  
+                        <input type="text" required />  
+                    </div>  
+                    <div className="form-group">  
+                        <label>Message:</label>  
+                        <textarea required></textarea>  
+                    </div>  
+                    <button type="submit" className="submit-button">Send</button>  
+                </form>  
+            </div>  
+            <div className="connect-container">  
+                <h2>Let’s Connect</h2>  
+                <div className="social-icons">  
+                    <a href="#" className="social-icon">  
+                        <div className="icon-circle">  
+                            <FontAwesomeIcon icon={faFacebook} />   
+                        </div>  
+                        <p>Facebook</p>   
+                    </a>  
+                    <a href="#" className="social-icon">  
+                        <div className="icon-circle">  
+                            <FontAwesomeIcon icon={faTwitter} />   
+                        </div>  
+                        <p>Twitter</p>   
+                    </a>  
+                    <a href="#" className="social-icon">  
+                        <div className="icon-circle">  
+                            <FontAwesomeIcon icon={faInstagram} />   
+                        </div>  
+                        <p>Instagram</p>  
+                    </a>  
+                    <a href="#" className="social-icon">  
+                        <div className="icon-circle">  
+                            <FontAwesomeIcon icon={faLinkedin} />   
+                        </div>  
+                        <p>LinkedIn</p>  
+                    </a>  
+                </div>  
+            </div>  
+        </div>  
+    );  
+};  
 
-const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-        ...formData,
-        [name]: value
-    });
-};
-
-const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`شكراً لتواصلك، ${formData.name}! سنتواصل معك قريباً.`);
-};
-
-  return (
-    <form onSubmit={handleSubmit} className="contact-form">
-    <h2 className="form-title">تواصل معنا</h2>
-    <div className="form-group">
-        <label htmlFor="name">الاسم</label>
-        <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="form-input"
-            required
-        />
-    </div>
-    <div className="form-group">
-        <label htmlFor="email">البريد الإلكتروني</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="form-input"
-            required
-        />
-    </div>
-    <div className="form-group">
-        <label htmlFor="message">الرسالة</label>
-        <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            className="form-textarea"
-            required
-        ></textarea>
-    </div>
-    <button type="submit" className="form-button">إرسال</button>
-</form>
-  )
-}
+export default ContactUs;
