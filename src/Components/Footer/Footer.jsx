@@ -1,29 +1,39 @@
-import React, { useEffect } from 'react';  
+import React, { useEffect, useState } from 'react';  
 import './Footer.css';  
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';  
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';  
+import { FaChevronUp } from "react-icons/fa";
+
 
 const Footer = () => {  
+    const [isVisible, setIsVisible] = useState(false);  
+
+    useEffect(() => {  
+        const handleScroll = () => {  
+            setIsVisible(window.scrollY > 500);  // تعيين القيمة إلى 100 بكسل  
+        };  
+
+        window.addEventListener('scroll', handleScroll);  
+
+        return () => {  
+            window.removeEventListener('scroll', handleScroll);  
+        };  
+    }, []);  
+
+    const scrollToTop = () => {  
+        window.scrollTo({  
+            top: 0,  
+            behavior: 'smooth'  
+        });  
+    };  
+
     return (  
         <footer className="footer">  
             <div className="footer-content">  
-                <h2>Stay Connected</h2>  
-                <div className="footer-social-icons">  
-                    <a href="#" className="footer-social-icon">  
-                        <FontAwesomeIcon icon={faFacebook} />  
-                    </a>  
-                    <a href="#" className="footer-social-icon">  
-                        <FontAwesomeIcon icon={faTwitter} />  
-                    </a>  
-                    <a href="#" className="footer-social-icon">  
-                        <FontAwesomeIcon icon={faInstagram} />  
-                    </a>  
-                    <a href="#" className="footer-social-icon">  
-                        <FontAwesomeIcon icon={faLinkedin} />  
-                    </a>  
-                </div>  
                 <p className="footer-text">© 2023 Your Company Name. All rights reserved.</p>  
             </div>  
+             
+                <button className={isVisible ? 'btn' : 'btnoff'} onClick={scrollToTop}><FaChevronUp />
+</button>  
+             
         </footer>  
     );  
 };  

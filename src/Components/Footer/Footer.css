@@ -1,11 +1,9 @@
 .footer {  
-    background: linear-gradient(#010101, rgb(51, 51, 51));  
-    color: #c2b4b4;  
+    background: linear-gradient(#fff8f8, rgb(254, 246, 246));  
+    color: #fffefe;  
     padding: 20px 0;  
-    text-align: center;  
-    position: relative;  
-    overflow: hidden; /* لمنع العناصر من الخروج من الفوتر */  
-    animation: zoom 2s ease-in-out infinite; /* تطبيق تأثير الزوم */  
+
+  
 }  
 
 .footer-content {  
@@ -14,33 +12,38 @@
     padding: 0 20px;  
 }  
 
-.footer-social-icons {  
-    display: flex;  
-    justify-content: center;  
-    margin: 15px 0;  
-    gap: 15px;  
-}  
-
-.footer-social-icon {  
-    color: #c2b4b4;  
-    font-size: 30px;  
-    transition: color 0.3s;  
-}  
 
 .footer-social-icon:hover {  
-    color: #b37700;  
+    color: #2a1e02;  
 }  
 
-.footer-text {  
-    margin-top: 10px;  
+.btn {  
+    position: fixed;  
+    bottom: 30px; /* المسافة من الأسفل */  
+    right: 100px;  /* المسافة من اليمين */  
+    background-color: #ff7f7f; /* لون خلفية الزر */  
+    color: white; /* لون النص */  
+    border: none;  
+    border-radius: 5px; /* شكل الزر */  
+    padding: 10px 15px; /* تفريغ الزر */  
+    cursor: pointer; /* شكل المؤشر عند مرور الماوس على الزر */  
+    transition: 0.6s; /* تأثير انتقال اللون */  
+    opacity: 1;
+}  
+.btnoff {  
+    position: fixed;  
+    bottom: 10px; /* المسافة من الأسفل */  
+    right: 100px;  /* المسافة من اليمين */  
+    background-color: #ff7f7f; /* لون خلفية الزر */  
+    color: white; /* لون النص */  
+    border: none;  
+    border-radius: 5px; /* شكل الزر */  
+    padding: 10px 15px; /* تفريغ الزر */  
+    cursor: pointer; /* شكل المؤشر عند مرور الماوس على الزر */  
+    transition: 0.6s; /* تأثير انتقال اللون */  
+    opacity: 0;
 }  
 
-/* تأثير الزوم */  
-@keyframes zoom {  
-    0%, 100% {  
-        transform: scale(1,1); /* الحجم الأصلي */  
-    }  
-    50% {  
-        transform: scale(1.2); /* تكبير الحجم قليلاً */  
-    }  
+.btn:hover {  
+    background-color: #ff4c4c; /* لون خلفية الزر عند التمرير عليه */  
 }
