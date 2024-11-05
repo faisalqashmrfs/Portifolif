@@ -12,7 +12,104 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  text-align: center;
+  text-align: start;
+}
+.Hero .Hero-Div .Content
+{
+  padding: 50px 0px 0px 10px;
+}
+.Hero .Hero-Div .Content h2 
+{ 
+  line-height: 55px;
+  position: relative;
+  color: var(--Text-color);
+}
+.Hero .Hero-Div .Content h3
+{ 
+  color: var(--Text-color);
+}
+.Hero .Hero-Div .Content h2 span
+{ 
+  background-color: var(--general-color2);
+  padding: 20px 30px;
+  border-radius: 25px; 
+  color: #fff;
+  position: absolute;
+  top: -30px;
+  line-height: 35px;
+  box-shadow: 0 2px 15px .1px var(--general-color2) ;
+}
+.Hero .Hero-Div .Content h2 span::after
+{ 
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--general-color2);
+  top: 63px;
+  left: 27px;
+  rotate: 45deg;
+  box-shadow: 0 2px 15px .1px var(--general-color2) ;
+}
+.Icons-on-Hero
+{
+  display: flex;
+  margin:  30px 0px;
+  width: 434px;
+  justify-content: space-between;
+  align-items: center;
+}
+.Btn-Animate
+{
+  height: 40px;
+  width: 90px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--Text-color);
+  transition: .4s;
+}
+.Btn-Animate:hover
+{
+  border: 1px solid #ffffff00;
+}
+.Icons-on-Hero button
+{
+  height: 40px;
+  width: 180px;
+  border-radius: 10px;
+  transition: .4s ease-in-out;
+  background: transparent;
+  display: flex;
+  border: none;
+  cursor: pointer;
+}
+.Icons-on-Hero button:hover
+{
+  transform: translate(-90px);
+}
+.Icons-on-Hero button span:nth-child(1)
+{
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  padding-top: 10px;
+}
+.Icons-on-Hero button span:nth-child(2)
+{
+  width: 90px;
+  height: 40px;
+  background-color: var(--general-color2);
+  color: #fff;
+  padding-top: 10px;
+}
+.Icons-on-Hero .Icons-Hero a
+{
+  margin: 0 10px;
+  color: var(--Text-color);
+}
+.Icons-on-Hero .Icons-Hero a:hover
+{
+  color: var(--general-color2) ;
 }
 .Img-area
 {
@@ -32,42 +129,61 @@
   border-bottom-left-radius: 50%;
 }
 
-@media (max-width:880px)
+@media (max-width:1250px)
 {
   .Hero .Hero-Div
   {
     width: 90vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
   }
 }
-
 @media (max-width:880px)
 {
-  .Hero .Hero-Div
+  .Icons-on-Hero
   {
-    width: 90vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    height: 50%;
-
+    margin:  20px 0px;
+    width: 300px;
   }
-}
-
-@media (max-width:880px)
-{
   .Hero .Hero-Div .Content h2
   { 
-    font-size: 20px;
+    font-size: 16px;
     line-height: 35px;
   }
   .Hero .Hero-Div .Content h3
   { 
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+  }
+  .Hero .Hero-Div .Content h2 span
+  { 
+    top: -30px;
+    line-height: 15px;
+  }
+  .Hero .Hero-Div .Content h2 span::after
+  { 
+    top: 41px;
+    left: 27px;
+  }
+  .Icons-on-Hero .Icons-Hero a
+  {
+    font-size: 20px;
+  }
+}
+@media (max-width:1250px)
+{
+  .Hero .Hero-Div
+  {
+    width: 90vw;
+  }
+}
+@media (max-width:630px)
+{
+  .Hero .Hero-Div
+  {
+    flex-direction: column;
+  }
+  .Hero .Hero-Div img
+  {
+    width: 180px;
+    margin: 20px 0px;
+    border-bottom-left-radius: 50%;
   }
 }

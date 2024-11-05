@@ -3,7 +3,7 @@
 :root {
 
   --general-color: black;
-  --general-color2: blue;
+  --general-color2: rgb(238, 43, 36);
 
   --Text-color: #8f8f8f;
   --general-Font: "Montserrat", sans-serif;
@@ -14,7 +14,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--Text-color);
   font-family: var(--general-Font);
 }
 

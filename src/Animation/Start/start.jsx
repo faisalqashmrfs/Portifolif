@@ -16,9 +16,9 @@ const StarryBackground = () => {
 
     resizeCanvas();
 
-    const numStars = 100;
+    const numStars = 150;
     const stars = [];
-    const maxMeteors = 4; // عدد الشهب الأقصى
+    const maxMeteors = 10; // عدد الشهب الأقصى
     const meteors = [];
 
     // إنشاء النجوم
@@ -75,13 +75,13 @@ const StarryBackground = () => {
 
         // توهج الشهب باللون الأزرق
         ctx.shadowBlur = 45;
-        ctx.shadowColor = '#f0f'; // توهج أزرق
+        ctx.shadowColor = '#f00'; // توهج أزرق
 
         // وميض الشهب
         ctx.globalAlpha = Math.abs(Math.sin(meteor.opacity));
 
         ctx.arc(meteor.x, meteor.y, meteor.radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#f0f'; // لون الشهاب الأزرق
+        ctx.fillStyle = '#f00'; // لون الشهاب الأزرق
         ctx.fill();
       });
 
@@ -155,7 +155,7 @@ const StarryBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }} />;
+  return <canvas ref={canvasRef} style={{width :'100vw' , position: 'fixed', top: 0, left: 0, zIndex: -1 }} />;
 };
 
 export default StarryBackground;

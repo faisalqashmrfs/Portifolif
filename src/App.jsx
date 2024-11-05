@@ -21,7 +21,7 @@ function App() {
         <LoadingScreen onLoaded={handleLoaded} />
       ) : (
         // هذا هو المحتوى الأساسي للبورتفوليو
-        <div> 
+        <div > 
           <button className='ModeChanger' onClick={() => setMode(!Mode)}><AiOutlineCodepen />
           </button>
           <PortfolioContent />

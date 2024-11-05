@@ -29,10 +29,13 @@ body
   background-color: transparent;
   transition: 10s ease-out;
   border: none;
-  border-top: 1px solid gray;
+  border-top: 1px solid var(--Text-color);
+  color: var(--Text-color);
 }
 .ModeChanger:hover
 {
   rotate: 36000deg;
   transition: 10s ease-out;
+  border-top: 1px solid var(--general-color2);
+  color: var(--general-color2);
 }
