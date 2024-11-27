@@ -13,12 +13,12 @@ import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/fre
 const ContactUs = () => {
     return (
 
-        <>
+        <div className='Fathar'>
             <div className=' Get-In-Touch'>
                 <h1 className='get'> Get In Touch</h1>
             </div>
 
-            <section>
+            <section style={{color : '#8f8f8f'}}>
                 <div className="parant">
 
                     <div className="children">
@@ -106,7 +106,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 };
 
