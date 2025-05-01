@@ -25,6 +25,8 @@
   align-items: center;
   font-weight: 600;
   font-size: 26px;
+
+  color: var(--Text-color);
 }
 
 @media (max-width: 450px)

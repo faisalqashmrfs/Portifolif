@@ -61,13 +61,7 @@ margin-bottom: 15px;
   width: 760px;   
   height: auto;  
   margin: 0 10px;  
-}  
-
-h2 {  
-  text-align: start;  
-  color: #c2b4b4;  
-  margin-bottom: 20px;  
-}   
+}    
 
 .Name-email {   
   display: flex;  
