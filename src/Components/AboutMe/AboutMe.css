@@ -35,9 +35,42 @@
   }
 }
 
-/* تخصيص الصورة داخل الـ blob */
 .blob img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* لضمان ملائمة الصورة بالكامل داخل الـ div */
+  object-fit: cover; 
+}
+
+@media (max-width:900px){
+  .About-me p{
+    width: 70vw;
+    font-size: 16px;
+    text-align: center;
+  }
+  .About-me h2{
+    font-size: 18px;
+  }
+  .blob {
+    width: 350px;
+    height: 350px;
+    }
+}
+
+@media (max-width:450px){
+  .About-me
+  {
+    padding: 20px;
+  }
+  .About-me p{
+    width: 90vw;
+    font-size: 14px;
+    text-align: center;
+  }
+  .About-me h2{
+    font-size: 16px;
+  }
+  .blob {
+  width: 250px;
+  height: 250px;
+  }
 }

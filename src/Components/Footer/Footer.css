@@ -20,7 +20,7 @@
 .btn {  
     position: fixed;  
     bottom: 30px; /* المسافة من الأسفل */  
-    right: 100px;  /* المسافة من اليمين */  
+    right: 25px;  /* المسافة من اليمين */  
     background-color: #ff7f7f; /* لون خلفية الزر */  
     color: white; /* لون النص */  
     border: none;  

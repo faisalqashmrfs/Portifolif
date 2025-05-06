@@ -1,4 +1,19 @@
+.animated-loop {
+  stroke-dasharray: 100 500; /* يتناسب مع المسار الكامل */
+  stroke-dashoffset: 0;
+  animation: loopPath 4s linear infinite;
+}
 
+@keyframes loopPath {
+  to {
+    stroke-dashoffset: -600;
+  }
+}
+
+.Fathar{
+  margin: 50px 0px;
+  display: none;
+}
 
 .Get-In-Touch {  
   display: flex;   

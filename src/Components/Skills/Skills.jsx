@@ -1,78 +1,77 @@
 import React from 'react';  
 import './Skills.css';   
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3 } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaGithub } from "react-icons/fa";
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5 , faCss3 , faJs , faReact , faGithub , faFigma, faRust, faFirstdraft } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
 
 
 const Skills = () => {  
     const skills = [  
         {  
             name: 'HTML',  
-            icon: <FaHtml5 />
-            ,  
+            icon: faHtml5,  
             description: 'Experience in writing clean and organized HTML code.'  
         },  
         {  
             name: 'CSS',  
-            icon: <FaCss3 />
-            ,  
+            icon: faCss3,  
             description: 'Designing attractive and responsive user interfaces.'  
         },  
         {  
             name: 'JavaScript',  
-            icon: <IoLogoJavascript />,  
+            icon: faJs, 
             description: 'Advanced skills in programming with JavaScript.'  
         },  
         {  
             name: 'React',  
-            icon: '⚛️',  
+            icon: faReact,  
             description: 'Building user interface applications using React.js.'  
         },  
         {  
             name: 'Git',  
-            icon: <FaGithub />
+            icon: faGithub
             ,  
             description: 'Managing projects and collaboration using Git.'  
         },  
         {  
             name: 'Web Design',  
-            icon: '🌐',  
+            icon: faFigma,  
             description: 'Designing and developing visually appealing websites.'  
         },  
         {  
             name: 'Responsive Design',  
-            icon: '📱',  
+            icon: faRust,  
             description: 'Developing layouts that adapt to various screen sizes.'  
         },  
         {  
             name: 'UX/UI Design',  
-            icon: '🎨',  
+            icon: faFirstdraft,  
             description: 'Enhancing user experience and creating effective user interfaces.'  
         },  
         {  
             name: 'RESTful APIs',  
-            icon: '🔗',  
+            icon: faLink,  
             description: 'Interacting with APIs efficiently.'  
         }  
     ];  
 
     return (  
+        <section className='Skills-sec'>
+        <h2>Skills</h2>  
         <div className="skills-container">  
-            <h2>Skills</h2>  
             <div className="skills-list">  
-                {skills.map((skill, index) => (  
-                    <div key={index} className="skill-card">  
-                        <div className="skill-icon">{skill.icon}</div>  
-                        <h3>{skill.name}</h3>  
-                        <p>{skill.description}</p>  
+                {skills.map((skill, index) => (
+                    <div key={index} className="skill-card">
+                        {/* <div className="skill-icon">{skill.icon}</div> */}
+                        <div className="skill-icon"><FontAwesomeIcon icon={skill.icon} /></div>
+                        <h3>{skill.name}</h3>
+                        <p>{skill.description}</p>
                     </div>  
                 ))}  
             </div>  
         </div>  
+        </section>
+    
     );  
 }  
 
