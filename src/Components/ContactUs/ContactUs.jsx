@@ -16,32 +16,29 @@ const ContactUs = () => {
         <div className='Fathar'>
             <div className=' Get-In-Touch'>
 
-            <div class="wrapper">
-  <svg width="360" height="140" xmlns="http://www.w3.org/2000/svg">
-    <path d="
+                <div class="wrapper">
+                    <svg width="200" height="140" xmlns="http://www.w3.org/2000/svg">
+                        <path d="
       M 10 40 
-      h 280 
-      a 10 10 0 0 1 10 10 
+      h 180 
+      a 10 10 0 0 0 10 10 
       v 40 
-      a 10 10 0 0 1 -10 10 
-      h -280 
-      a 10 10 0 0 1 -10 -10 
+      a 10 10 0 0 0 -10 10 
+      h -180 
+      a 10 10 0 0 0 -10 -10 
       v -40 
-      a 10 10 0 0 1 10 -10 
-      z" 
-      fill="none" stroke="red" stroke-width="2"
-      class="animated-loop"
-    />
-    <rect x="20" y="50" width="300" height="40" fill="#f0f0f0" stroke="#ccc"/>
-    <text x="170" y="72" dominant-baseline="middle" text-anchor="middle" font-size="16">
-      هذه جملة طويلة تجريبية للتأكد من أن الإطار يتسع لها دون قطع
-    </text>
-  </svg>
-</div>
+      a 10 10 0 0 0 10 -10 
+      z"
+                            fill="#333333" stroke="red" stroke-width="2"
+                            class="animated-loop"
+                        />
+                        <rect x="20" y="50" width="160" height="40" fill="none" stroke="#ccc" />
+                        <text x="100" y="72" dominant-baseline="middle" text-anchor="middle" font-size="18" fontWeight="600">
+                            Get In Touch
+                        </text>
+                    </svg>
+                </div>
 
-
-
-                {/* <h1 className='get'> Get In Touch</h1> */}
             </div>
 
             <section style={{ color: '#8f8f8f' }}>
