@@ -229,8 +229,10 @@ textarea {
     }  
 
     .social-icon {  
-        width: 90%; 
-        margin: 10px 0;  
+        width: 170px; 
+        margin: 10px auto; 
+        padding-left: 20px; 
+        justify-content: flex-start;
         
     }  
 }

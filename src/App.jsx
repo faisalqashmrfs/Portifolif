@@ -17,10 +17,11 @@ function App() {
     <main className={Mode? 'desmain' : 'main'}>
       <StarryBackground/>
 
-      {!loading ? (
+      {loading ? 
+      (
         <LoadingScreen onLoaded={handleLoaded} />
       ) : (
-        // هذا هو المحتوى الأساسي للبورتفوليو
+
         <div > 
           <button className='ModeChanger' onClick={() => setMode(!Mode)}><AiOutlineCodepen />
           </button>

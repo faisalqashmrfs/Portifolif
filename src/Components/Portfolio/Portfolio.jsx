@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';  
 import './Portfolio.css';  
-import img from './background.jpg'
+import img1 from './img/12.png'
+import img2 from './img/13.png'
+import img3 from './img/14.png'
+import img4 from './img/15.png'
+import img5 from './img/16.png'
+import img6 from './img/17.png'
 
 const Portfolio = () => {  
   const works = [  
-    { id: 1, title: 'عمل 1', description: 'وصف عمل 1' },  
-    { id: 2, title: 'عمل 2', description: 'وصف عمل 2' },  
-    { id: 3, title: 'عمل 3', description: 'وصف عمل 3' },  
-    { id: 4, title: 'عمل 4', description: 'وصف عمل 4' },  
-    { id: 5, title: 'عمل 5', description: 'وصف عمل 5' },  
+    { id: 1, title: 'EduPress', description: 'https://faisalqashmrfs.github.io/Education/#' , img : img1 },  
+    { id: 2, title: 'static-project-x', description: 'https://faisalqashmrfs.github.io/static-project-x-frontend/dashboard/' , img : img2 },  
+    { id: 3, title: 'golobe', description: 'https://faisalqashmrfs.github.io/Golobe-X-Front/' , img : img3 },  
+    { id: 4, title: 'SIRIA', description: '#' , img : img4 },  
+    { id: 5, title: 'Crypto', description: 'https://faisalqashmrfs.github.io/Crypto-abd/' , img : img5 },  
+    { id: 6, title: 'Breeze', description: '#' , img : img6 },  
+
   ];  
 
   const [value, setValue] = useState(1);
@@ -58,8 +65,8 @@ const Portfolio = () => {
           {works.slice(currentIndex, currentIndex + value).map(work => (  
             <div key={work.id} className="work-item">  
                <h3>{work.title}</h3>  
-               <p>{work.description}</p> 
-               <img src={img} alt="" />
+               <h3><a href={work.description}>{work.description == "#" ? 'موقع سري' : 'clice to viwe'}</a></h3> 
+               <img src={work.img} alt="" />
             </div>  
             
           ))}  
