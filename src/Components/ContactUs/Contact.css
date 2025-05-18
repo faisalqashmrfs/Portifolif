@@ -1,7 +1,7 @@
 .animated-loop {
-  stroke-dasharray: 100 400; /* يتناسب مع المسار الكامل */
+  stroke-dasharray: 100 150; /* يتناسب مع المسار الكامل */
   stroke-dashoffset: 0;
-  animation: loopPath 3s linear infinite;
+  animation: loopPath 4s linear infinite;
 }
 
 @keyframes loopPath {
@@ -46,9 +46,10 @@
   height: auto;  
   display: flex;  
   flex-direction: column;  
-  justify-content: space-between;  
+  justify-content: center;  
   align-items: center;  
   margin: 20px 0;
+  text-align: center;
 }  
 
 .children h2 { 

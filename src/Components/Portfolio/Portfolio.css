@@ -124,5 +124,9 @@
     right: 50%;
     transform: translateX(120%);
   }
+  .work-item h3
+  {
+    font-size: 12px;
+  }
 }
 

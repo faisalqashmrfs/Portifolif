@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './Hero.css'
 import MyPhoto from './../../assets/picsvg_download.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function Hero() {
   return (
@@ -15,25 +15,27 @@ export default function Hero() {
             <h3>just scrolling To Discover Me</h3>
             <div className='Icons-on-Hero'>
               <div className='Btn-Animate'>
-                <button
-                  onClick={() => {
-                    console.log('test');
-                  }}>
-                  <span>Contact .. !</span>
-                  <span>one Click </span>
+                <button>
+                  <span>CV .. ?</span>
+                  <span>
+                    <a href="Faisalcv.pdf" download style={{textDecoration:'none' , color:'#fff' }}>
+                      one Click
+                    </a>
+                  </span>
+
                 </button>
               </div>
               <div className='Icons-Hero'>
-                <a href="#" className="footer-social-icon">
+                <a href="https://www.facebook.com/profile.php?id=100026623652135" className="footer-social-icon">
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
-                <a href="#" className="footer-social-icon">
-                  <FontAwesomeIcon icon={faTwitter} />
+                <a href="https://github.com/faisalqashmrfs" className="footer-social-icon">
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href="#" className="footer-social-icon">
+                <a href="https://www.instagram.com/faesalekashmar/" className="footer-social-icon">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a href="#" className="footer-social-icon">
+                <a href="https://www.linkedin.com/in/faisal-qashmr-234b7b260/" className="footer-social-icon">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </div>

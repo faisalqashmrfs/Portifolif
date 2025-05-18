@@ -12,8 +12,8 @@ const Portfolio = () => {
     { id: 1, title: 'EduPress', description: 'https://faisalqashmrfs.github.io/Education/#' , img : img1 },  
     { id: 2, title: 'static-project-x', description: 'https://faisalqashmrfs.github.io/static-project-x-frontend/dashboard/' , img : img2 },  
     { id: 3, title: 'golobe', description: 'https://faisalqashmrfs.github.io/Golobe-X-Front/' , img : img3 },  
-    { id: 4, title: 'SIRIA', description: '#' , img : img4 },  
     { id: 5, title: 'Crypto', description: 'https://faisalqashmrfs.github.io/Crypto-abd/' , img : img5 },  
+    { id: 4, title: 'SIRIA', description: '#' , img : img4 },  
     { id: 6, title: 'Breeze', description: '#' , img : img6 },  
 
   ];  
@@ -65,7 +65,7 @@ const Portfolio = () => {
           {works.slice(currentIndex, currentIndex + value).map(work => (  
             <div key={work.id} className="work-item">  
                <h3>{work.title}</h3>  
-               <h3><a href={work.description}>{work.description == "#" ? 'موقع سري' : 'clice to viwe'}</a></h3> 
+               <h3><a href={work.description}>{work.description == "#" ? 'Soon' : 'clice to viwe'}</a></h3> 
                <img src={work.img} alt="" />
             </div>  
             

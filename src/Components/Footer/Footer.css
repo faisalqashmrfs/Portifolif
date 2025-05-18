@@ -2,14 +2,15 @@
     background: linear-gradient(#fff8f8, rgb(254, 246, 246));  
     color: #fffefe;  
     padding: 20px 0;  
-
+    display: flex;
   
 }  
 
 .footer-content {  
-    max-width: 1200px;  
     margin: 0 auto;  
     padding: 0 20px;  
+    color: #000;
+    font-weight: 600;
 }  
 
 

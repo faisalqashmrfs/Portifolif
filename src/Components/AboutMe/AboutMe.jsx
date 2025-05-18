@@ -24,7 +24,9 @@ export default function AboutMe() {
       <div className="blob">
           <img src={me} alt="Profile" />
         </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illum soluta necessitatibus reiciendis nihil culpa eos labore, deleniti fugiat iure debitis sequi ducimus qui, error, voluptatum consequuntur itaque tempora ratione!</p>
+      <p>
+         Experienced Front End Developer skilled in managing multiple React projects simultaneously. Demonstrates strong critical thinking, problem solving, time management, multitasking, and effective communication. Passionate about building scalable web applications and mentoring junior developers.
+      </p>
     </section>
   )
 }

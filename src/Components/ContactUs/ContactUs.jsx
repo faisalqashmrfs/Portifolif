@@ -8,7 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const ContactUs = () => {
     return (
@@ -19,9 +19,9 @@ const ContactUs = () => {
                 <div class="wrapper">
                     <svg width="200" height="140" xmlns="http://www.w3.org/2000/svg">
                         <path d="
-      M 10 40 
+      M 10 40
       h 180 
-      a 10 10 0 0 0 10 10 
+      a 10 10 0 0 0 10 10
       v 40 
       a 10 10 0 0 0 -10 10 
       h -180 
@@ -29,7 +29,7 @@ const ContactUs = () => {
       v -40 
       a 10 10 0 0 0 10 -10 
       z"
-                            fill="#333333" stroke="red" stroke-width="2"
+                            fill="#333333" stroke="red" stroke-width="3"
                             class="animated-loop"
                         />
                         <rect x="20" y="50" width="160" height="40" fill="none" stroke="#ccc" />
@@ -48,29 +48,33 @@ const ContactUs = () => {
                         <h2>  <CiLocationOn />
                         </h2>
                         <h3>addres</h3>
-                        <p>999 Carter Street
-                            Sailor Springs, IL 62434</p>
+                        <p>
+                            Hama - Syrai
+                        </p>
                     </div>
                     <div className="children">
                         <h2><FaPhoneAlt />
                         </h2>
                         <h3>phone</h3>
-                        <p>999 Carter Street
-                            Sailor Springs, IL 62434</p>
+                        <p>
+                            +963934749446
+                        </p>
                     </div>
                     <div className="children">
                         <h2><MdOutlineEmail />
                         </h2>
                         <h3>email</h3>
-                        <p>999 Carter Street
-                            Sailor Springs, IL 62434</p>
+                        <p>
+                            faisalqashmr.fs@gmail.com
+                        </p>
                     </div>
                     <div className="children">
                         <h2><FaWhatsapp />
                         </h2>
                         <h3>fedback chat</h3>
-                        <p>999 Carter Street
-                            Sailor Springs, IL 62434</p>
+                        <p>
+                            https://wa.me/+963934749446
+                        </p>
                     </div>
                 </div>
                 <div className="contact-us-page">
@@ -101,25 +105,25 @@ const ContactUs = () => {
                     <div className="connect-container">
                         <h2>Let’s Connect</h2>
                         <div className="social-icons">
-                            <a href="#" className="social-icon">
+                            <a href="https://www.facebook.com/profile.php?id=100026623652135" className="social-icon">
                                 <div className="icon-circle">
                                     <FontAwesomeIcon icon={faFacebook} />
                                 </div>
                                 <p>Facebook</p>
                             </a>
-                            <a href="#" className="social-icon">
+                            <a href="https://github.com/faisalqashmrfs" className="social-icon">
                                 <div className="icon-circle">
-                                    <FontAwesomeIcon icon={faTwitter} />
+                                    <FontAwesomeIcon icon={faGithub} />
                                 </div>
-                                <p>Twitter</p>
+                                <p>Github</p>
                             </a>
-                            <a href="#" className="social-icon">
+                            <a href="https://www.instagram.com/faesalekashmar/" className="social-icon">
                                 <div className="icon-circle">
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </div>
                                 <p>Instagram</p>
                             </a>
-                            <a href="#" className="social-icon">
+                            <a href="https://www.linkedin.com/in/faisal-qashmr-234b7b260/" className="social-icon">
                                 <div className="icon-circle">
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </div>
